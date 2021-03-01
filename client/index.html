@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat con Socket.io y NodeJS</title>
+  
+  <!-- Carga el script de Socket.io -->
+  <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+  
+  <!-- Carga el script custom -->
+  <script type="text/javascript" src="main.js"></script>
+
+  <style>
+    #messages{
+      width: 95%;
+      max-width: 400px;
+      height: 350px;
+      overflow-y: scroll;
+      border: 1px solid #eee;
+      box-shadow: 0px 0px 20px #ccc inset;
+      background: darkslategray;
+    }
+
+    .message{
+      margin: 20px;
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="messages"></div>
+
+  <form onsubmit="return addMessage(this);">
+    <input id="nickname" type="text" placeholder="Nickname">
+    <textarea id="text" placeholder= "Message..."></textarea>
+    <input type="submit" value="Send">
+  </form>
+
+</body>
+</html>
